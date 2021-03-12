@@ -10,12 +10,13 @@ public class Simulation {
         this.numberOfTosses = numberOfTosses;
 
         die = new Dice(numberOfDice);
-        binGroup = new Bins(numberOfDice, numberOfDice * 6);
+        binGroup = new Bins(numberOfDice, (numberOfDice * 6));
     }
 
     public void runSimulation(){
         for(int i = 0; i < numberOfTosses; i++){
-            binGroup.incrementBin(die.tossAndSum());
+            int x = die.tossAndSum();
+            binGroup.incrementBin(x);
         }
     }
 

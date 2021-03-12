@@ -11,7 +11,7 @@ public class Bins {
         this.maximum = maximum;
         this.bins = new ArrayList<Integer>();
 
-        for(int i = 0; i < maximum - minimum; i++){
+        for(int i = 0; i <= maximum - minimum; i++){
             this.bins.add(0);
         }
 
@@ -22,7 +22,7 @@ public class Bins {
     }
 
     public void incrementBin(int index){
-        this.bins.set(index - minimum, this.bins.get(index - minimum) + 1);
+        this.bins.set((index - minimum), this.bins.get(index - minimum) + 1);
     }
 
     public int getMinimum(){
