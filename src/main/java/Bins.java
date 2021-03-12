@@ -10,6 +10,19 @@ public class Bins {
         this.minimum = minimum;
         this.maximum = maximum;
         this.bins = new ArrayList<Integer>(maximum - minimum + 1);
+
+        for(int i = 0; i < maximum - minimum; i++){
+            this.bins.set(i, 0);
+        }
+
+    }
+
+    public int getBins(int index){
+        return this.bins.get(index - minimum);
+    }
+
+    public void incrementBin(int index){
+        this.bins.set(index - minimum, this.bins.get(index - minimum) + 1);
     }
 
 }
