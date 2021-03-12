@@ -25,4 +25,12 @@ public class Bins {
         this.bins.set(index - minimum, this.bins.get(index - minimum) + 1);
     }
 
+    public int getMinimum(){
+        return this.minimum;
+    }
+
+    public int getSize(){
+        return this.bins.size();
+    }
+
 }
