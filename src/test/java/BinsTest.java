@@ -12,4 +12,18 @@ public class BinsTest {
 
         Assert.assertEquals(x, 1);
     }
+
+    @Test
+    public void getAndIncrementTest2(){
+        Bins binGroup = new Bins(3,18);
+
+        binGroup.incrementBin(17);
+        binGroup.incrementBin(17);
+        binGroup.incrementBin(17);
+        binGroup.incrementBin(17);
+
+        int x = binGroup.getBins(17);
+
+        Assert.assertEquals(x, 4);
+    }
 }

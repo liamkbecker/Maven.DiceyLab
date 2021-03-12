@@ -9,10 +9,10 @@ public class Bins {
     public Bins(int minimum, int maximum){
         this.minimum = minimum;
         this.maximum = maximum;
-        this.bins = new ArrayList<Integer>(maximum - minimum + 1);
+        this.bins = new ArrayList<Integer>();
 
         for(int i = 0; i < maximum - minimum; i++){
-            this.bins.set(i, 0);
+            this.bins.add(0);
         }
 
     }
